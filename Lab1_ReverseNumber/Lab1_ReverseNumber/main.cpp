@@ -14,9 +14,19 @@ int main()
     cout << "Enter C: ";
     cin >> C;
 
-    cout << boolalpha
-        << ((A == B || A == C || B == C) ? true : false)
-        << endl;
+    bool result = (A == B || A == C || B == C);
+
+    cout << boolalpha;
+    cout << "Result: " << result << endl;
+
+    if (result)
+    {
+        cout << "At least two numbers are equal." << endl;
+    }
+    else
+    {
+        cout << "All three numbers are different." << endl;
+    }
 
     return 0;
 }
